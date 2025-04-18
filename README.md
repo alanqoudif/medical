@@ -210,3 +210,144 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support (الدعم)
 For support, please email info@nuqtai.com or open an issue in the GitHub repository.
+
+## Deployment on Netlify (النشر على Netlify)
+
+1. Create a Netlify Account (إنشاء حساب على Netlify):
+   - Visit [Netlify](https://www.netlify.com/)
+   - Sign up for a free account
+
+2. Prepare Your Project (تجهيز المشروع):
+   ```bash
+   # Build your project
+   npm run build
+   ```
+
+3. Deploy via Netlify UI (النشر عبر واجهة Netlify):
+   - Log in to Netlify
+   - Drag and drop your `out` or `build` folder to Netlify
+   - Wait for deployment to complete
+
+4. Deploy via Netlify CLI (النشر عبر واجهة سطر الأوامر):
+   ```bash
+   # Install Netlify CLI
+   npm install netlify-cli -g
+
+   # Login to Netlify
+   netlify login
+
+   # Initialize your site
+   netlify init
+
+   # Deploy your site
+   netlify deploy --prod
+   ```
+
+5. Configure Environment Variables (إعداد متغيرات البيئة):
+   - Go to Site settings > Build & deploy > Environment
+   - Add all variables from your `.env.local` file
+   - Redeploy your site
+
+6. Setup Custom Domain (إعداد نطاق مخصص) - Optional:
+   - Go to Domain settings
+   - Add your custom domain
+   - Configure DNS settings
+
+## Graduation Project Defense FAQ (أسئلة متوقعة في مناقشة مشروع التخرج)
+
+### Project Overview (نظرة عامة على المشروع)
+
+1. **What problem does your project solve? (ما هي المشكلة التي يحلها مشروعك؟)**
+   - The project addresses the need for secure, transparent medical record management
+   - Solves issues of data privacy and accessibility in healthcare
+   - Reduces paperwork and administrative overhead
+   - Enables secure sharing of medical records between healthcare providers
+
+2. **Why did you choose blockchain technology? (لماذا اخترت تقنية البلوكتشين؟)**
+   - Immutable record-keeping
+   - Decentralized data storage
+   - Enhanced security and transparency
+   - Smart contract automation
+   - Patient data ownership and control
+
+### Technical Implementation (التنفيذ التقني)
+
+3. **How does the encryption system work? (كيف يعمل نظام التشفير؟)**
+   - Patient data is encrypted before being stored on IPFS
+   - Each record has a unique encryption key
+   - Smart contracts manage access control
+   - Only authorized parties can decrypt and access records
+   - Implementation uses industry-standard encryption algorithms
+
+4. **Explain the smart contract architecture (اشرح هيكلية العقود الذكية)**
+   - Main Healthcare contract manages core functionality
+   - Separate structs for Patients, Doctors, and Medical Records
+   - Access control modifiers ensure security
+   - Event system for tracking changes
+   - Gas-optimized operations
+
+5. **How do you ensure data privacy? (كيف تضمن خصوصية البيانات؟)**
+   - Off-chain storage of sensitive data using IPFS
+   - On-chain storage of access controls and metadata
+   - Role-based access control
+   - Encrypted data transmission
+   - Audit trail of all access attempts
+
+### Security Measures (إجراءات الأمان)
+
+6. **What security measures are implemented? (ما هي إجراءات الأمان المطبقة؟)**
+   - Smart contract access controls
+   - Data encryption at rest and in transit
+   - Secure key management
+   - Regular security audits
+   - Compliance with healthcare data regulations
+
+7. **How do you handle potential attacks? (كيف تتعامل مع الهجمات المحتملة؟)**
+   - Input validation in smart contracts
+   - Rate limiting for API calls
+   - Protection against reentrancy attacks
+   - Secure random number generation
+   - Emergency stop functionality
+
+### Scalability and Performance (قابلية التوسع والأداء)
+
+8. **How scalable is the system? (ما مدى قابلية النظام للتوسع؟)**
+   - Uses IPFS for distributed storage
+   - Optimized smart contract operations
+   - Batch processing capabilities
+   - Efficient data indexing
+   - Load balancing implementation
+
+9. **What are the performance considerations? (ما هي اعتبارات الأداء؟)**
+   - Transaction confirmation times
+   - Gas optimization techniques
+   - IPFS content addressing
+   - Caching strategies
+   - Network latency handling
+
+### Future Improvements (التحسينات المستقبلية)
+
+10. **What future improvements could be made? (ما هي التحسينات المستقبلية الممكنة؟)**
+    - Integration with more healthcare providers
+    - Enhanced AI-powered diagnostics
+    - Mobile application development
+    - Additional blockchain network support
+    - Advanced analytics capabilities
+
+### Project Impact (تأثير المشروع)
+
+11. **What is the potential impact of your project? (ما هو التأثير المحتمل لمشروعك؟)**
+    - Improved patient care through better record access
+    - Reduced healthcare costs
+    - Enhanced data security and privacy
+    - Streamlined healthcare operations
+    - Better collaboration between healthcare providers
+
+### Technical Challenges (التحديات التقنية)
+
+12. **What were the main technical challenges? (ما هي التحديات التقنية الرئيسية؟)**
+    - Implementing secure encryption
+    - Gas optimization for smart contracts
+    - IPFS integration and management
+    - User interface design for Web3
+    - Cross-platform compatibility
