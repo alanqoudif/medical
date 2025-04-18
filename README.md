@@ -22,11 +22,11 @@ A comprehensive medical system built with blockchain technology to manage patien
    - Available for Chrome, Firefox, Brave, and Edge
 
 2. ⚙️ Configure Holesky Network (إعداد شبكة Holesky):
-   - Network Name: Holesky Test Network
-   - New RPC URL: https://ethereum-holesky.publicnode.com
+   - Network Name: Holesky
+   - Default RPC URL: rpc.ankr.com/eth_holesky
    - Chain ID: 17000
    - Currency Symbol: ETH
-   - Block Explorer URL: https://holesky.etherscan.io
+   - Block Explorer URL: holesky.etherscan.io
 
 3. 💰 Get Test ETH (الحصول على ETH تجريبي):
    - Visit [Holesky Faucet](https://holesky-faucet.pk910.de/)
@@ -313,7 +313,7 @@ For support, please email info@nuqtai.com or open an issue in the GitHub reposit
    - Regular security audits
    - Compliance with healthcare data regulations
 
-7. **🛡️ How do you handle potential attacks? (كيف تتعامل مع الهجمات المحتملة؟)**
+7. **��️ How do you handle potential attacks? (كيف تتعامل مع الهجمات المحتملة؟)**
    - Input validation in smart contracts
    - Rate limiting for API calls
    - Protection against reentrancy attacks
@@ -362,3 +362,18 @@ For support, please email info@nuqtai.com or open an issue in the GitHub reposit
     - IPFS integration and management
     - User interface design for Web3
     - Cross-platform compatibility
+
+## 🏢 About Us (معلومات عنا)
+
+This project is designed and developed by **Nuqta Technical Solutions** (نقطة للحلول التقنية).
+
+<div align="center">
+
+[![Website](https://img.shields.io/badge/Website-nuqtai.com-blue?style=for-the-badge&logo=google-chrome&logoColor=white)](https://nuqtai.com)
+[![Instagram](https://img.shields.io/badge/Instagram-@nuqta__om-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/nuqta_om)
+
+</div>
+
+### 🚀 Future Availability (التوفر المستقبلي)
+
+This medical system is planned to be available for public use by 2030 (سيتوفر هذا النظام الطبي للاستخدام العام بحلول عام 2030).
