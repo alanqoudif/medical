@@ -5,6 +5,25 @@ A comprehensive medical system built with blockchain technology to manage patien
 
 ## Prerequisites (المتطلبات الأساسية)
 
+### MetaMask Wallet Setup (إعداد محفظة MetaMask)
+
+1. Install MetaMask (تثبيت المحفظة):
+   - [Watch Tutorial: How to Create Free MetaMask Wallet](https://www.youtube.com/watch?v=MlmAeyhGMbU)
+   - Install from [MetaMask Official Website](https://metamask.io/)
+   - Available for Chrome, Firefox, Brave, and Edge
+
+2. Configure Holesky Network (إعداد شبكة Holesky):
+   - Network Name: Holesky Test Network
+   - New RPC URL: https://ethereum-holesky.publicnode.com
+   - Chain ID: 17000
+   - Currency Symbol: ETH
+   - Block Explorer URL: https://holesky.etherscan.io
+
+3. Get Test ETH (الحصول على ETH تجريبي):
+   - Visit [Holesky Faucet](https://holesky-faucet.pk910.de/)
+   - Enter your wallet address
+   - Receive free test ETH
+
 ### Node.js Setup (إعداد Node.js)
 
 1. Install NVM (Node Version Manager):
@@ -31,9 +50,22 @@ node --version
 # Should output: v18.17.1
 ```
 
-### Local Blockchain Setup (إعداد البلوكتشين المحلي)
+### Local Development Network (شبكة التطوير المحلية)
 
-#### MetaMask Configuration (إعداد MetaMask)
+You can use either:
+
+1. Holesky Testnet (الشبكة التجريبية):
+   - Production-like environment
+   - Requires test ETH
+   - Real blockchain interactions
+
+2. Local Hardhat Network (الشبكة المحلية):
+   - For development and testing
+   - Instant transactions
+   - Free test ETH
+   - No real blockchain costs
+
+#### MetaMask Configuration for Local Network (إعداد MetaMask للشبكة المحلية)
 1. Network Name: localhost
 2. RPC URL: http://127.0.0.1:8545
 3. Chain ID: 1337
