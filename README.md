@@ -313,7 +313,7 @@ For support, please email info@nuqtai.com or open an issue in the GitHub reposit
    - Regular security audits
    - Compliance with healthcare data regulations
 
-7. **��️ How do you handle potential attacks? (كيف تتعامل مع الهجمات المحتملة؟)**
+7. **🔄 How do you handle potential attacks? (كيف تتعامل مع الهجمات المحتملة؟)**
    - Input validation in smart contracts
    - Rate limiting for API calls
    - Protection against reentrancy attacks
@@ -377,3 +377,40 @@ This project is designed and developed by **Nuqta Technical Solutions** (نقط�
 ### 🚀 Future Availability (التوفر المستقبلي)
 
 This medical system is planned to be available for public use by 2030 (سيتوفر هذا النظام الطبي للاستخدام العام بحلول عام 2030).
+
+## 📦 Pinata IPFS Setup (إعداد Pinata IPFS)
+
+### 1. Create Pinata Account (إنشاء حساب Pinata):
+1. 🌐 Visit [Pinata Cloud](https://pinata.cloud/)
+2. 👆 Click "Get Started" or "Sign Up"
+3. ✉️ Enter your email and create a password
+4. ✅ Verify your email address
+
+### 2. Get API Keys (الحصول على مفاتيح API):
+1. 🔑 Log in to your Pinata account
+2. ⚙️ Go to "Developer" section from the left sidebar
+3. 🆕 Click "New Key" button
+4. 📝 Configure your key:
+   - Give it a name (e.g., "Medical System")
+   - Enable "pinFileToIPFS"
+   - Enable other permissions as needed
+5. 📋 Copy your keys:
+   - API Key
+   - API Secret
+   - JWT (if needed)
+
+### 3. Configure Environment Variables (إعداد متغيرات البيئة):
+Add your Pinata keys to `.env.local`:
+```env
+NEXT_PUBLIC_PINATA_API_KEY=your_api_key_here
+NEXT_PUBLIC_PINATA_SECRET_KEY=your_secret_key_here
+```
+
+### 4. Free Tier Limits (حدود الخطة المجانية):
+- 500 files pinned
+- 1GB storage
+- 1 Gateway
+- 10GB bandwidth/month
+- 10k requests/month
+
+> **Note**: For production use, consider upgrading to a paid plan for higher limits and better performance.
