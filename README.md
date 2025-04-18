@@ -1,22 +1,23 @@
 # Medical System (النظام الطبي)
 
 ## Description (الوصف)
-A comprehensive medical system built with modern web technologies to manage patient records, appointments, and medical transactions with secure encryption.
+A comprehensive medical system built with blockchain technology to manage patient records, appointments, and medical transactions securely on the Ethereum network.
 
 ## Features (المميزات)
 - Patient management (إدارة المرضى)
 - Appointment scheduling (جدولة المواعيد)
-- Secure data encryption (تشفير البيانات بشكل آمن)
+- Secure blockchain-based data storage (تخزين البيانات على البلوكتشين)
 - Medical records management (إدارة السجلات الطبية)
 - Prescription management (إدارة الوصفات الطبية)
+- Smart contract integration (تكامل العقود الذكية)
 
 ## Technologies Used (التقنيات المستخدمة)
 - Next.js
-- TypeScript
-- Supabase
-- Tailwind CSS
-- Prisma
-- NextAuth.js
+- Ethereum Blockchain
+- Web3.js
+- IPFS/Pinata
+- Smart Contracts (Solidity)
+- OpenAI Integration
 
 ## Installation (التثبيت)
 
@@ -32,75 +33,92 @@ npm install
 ```
 
 3. Set up environment variables (إعداد متغيرات البيئة):
-Create a `.env` file in the root directory and add the following:
+Create a `.env.local` file in the root directory and add the following:
 ```env
-DATABASE_URL="your-database-url"
-NEXTAUTH_SECRET="your-nextauth-secret"
-NEXTAUTH_URL="http://localhost:3000"
-SUPABASE_URL="your-supabase-url"
-SUPABASE_ANON_KEY="your-supabase-anon-key"
+# Contract Address
+NEXT_PUBLIC_HEALTH_CARE=your_contract_address
+
+# OpenAI API Key
+NEXT_PUBLIC_OPEN_AI_KEY=your_openai_api_key
+
+# Transaction Fees (in ETH)
+NEXT_PUBLIC_DOCTOR_REGISTER_FEE=0.0025
+NEXT_PUBLIC_PATIENT_APPOINMENT_FEE=0.0025
+NEXT_PUBLIC_PATIENT_REGISTER_FEE=0.00025
+
+# Network Configuration
+NEXT_PUBLIC_NETWORK=holesky
+NEXT_PUBLIC_CURRENCY=ETH
+
+# Admin Address
+NEXT_PUBLIC_ADMIN_ADDRESS=your_admin_wallet_address
+
+# Pinata (IPFS) Configuration
+NEXT_PUBLIC_PINATA_API_KEY=your_pinata_api_key
+NEXT_PUBLIC_PINATA_SECRET_KEY=your_pinata_secret_key
+NEXT_PUBLIC_RPC_URL=your_ethereum_rpc_url
 ```
 
-4. Run database migrations (تشغيل ترحيل قاعدة البيانات):
-```bash
-npx prisma migrate dev
-```
-
-5. Start the development server (تشغيل خادم التطوير):
+4. Start the development server (تشغيل خادم التطوير):
 ```bash
 npm run dev
 ```
 
+## Blockchain Integration (تكامل البلوكتشين)
+
+### Smart Contract Details (تفاصيل العقد الذكي)
+- Network: Holesky (Ethereum Testnet)
+- Currency: ETH
+- Contract Address: Check `.env.local` file
+
+### Transaction Fees (رسوم المعاملات)
+- Doctor Registration: 0.0025 ETH
+- Patient Registration: 0.00025 ETH
+- Appointment Booking: 0.0025 ETH
+
 ## Data Security (أمن البيانات)
 
-### Encryption Implementation (تنفيذ التشفير)
-- All sensitive data is encrypted using AES-256-GCM encryption
-- Patient data is encrypted at rest and in transit
-- Unique encryption keys for each patient record
-- Secure key management using AWS KMS
-
-### Security Measures (إجراءات الأمان)
-1. End-to-end encryption for all sensitive data
-2. Role-based access control (RBAC)
-3. Audit logging for all data access
-4. Regular security updates and patches
-5. Compliance with healthcare data protection standards
+### Security Implementation (تنفيذ الأمان)
+- Decentralized data storage using IPFS
+- Smart contract-based access control
+- Encrypted medical records on IPFS
+- Blockchain-based audit trail
+- Secure key management
 
 ## Usage (الاستخدام)
 
-1. Login with your credentials (تسجيل الدخول):
-   - Access the system at `http://localhost:3000`
-   - Enter your username and password
+1. Connect Wallet (ربط المحفظة):
+   - Install MetaMask or compatible Web3 wallet
+   - Connect to Holesky testnet
+   - Ensure you have sufficient ETH for transactions
 
 2. Navigate the dashboard (استخدام لوحة التحكم):
-   - View patient records
-   - Schedule appointments
-   - Manage prescriptions
-   - Generate reports
+   - Register as doctor/patient
+   - Manage appointments
+   - Access medical records
+   - Process prescriptions
 
-## API Documentation (توثيق واجهة البرمجة)
-
-### Authentication (المصادقة)
-```typescript
-POST /api/auth/login
-POST /api/auth/logout
-POST /api/auth/refresh
-```
+## Smart Contract Functions (وظائف العقد الذكي)
 
 ### Patient Management (إدارة المرضى)
-```typescript
-GET /api/patients
-POST /api/patients
-PUT /api/patients/:id
-DELETE /api/patients/:id
+```solidity
+registerPatient()
+updatePatientDetails()
+getPatientRecords()
+```
+
+### Doctor Management (إدارة الأطباء)
+```solidity
+registerDoctor()
+updateDoctorDetails()
+getDoctorAvailability()
 ```
 
 ### Appointments (المواعيد)
-```typescript
-GET /api/appointments
-POST /api/appointments
-PUT /api/appointments/:id
-DELETE /api/appointments/:id
+```solidity
+bookAppointment()
+cancelAppointment()
+updateAppointmentStatus()
 ```
 
 ## Contributing (المساهمة)
@@ -110,4 +128,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Support (الدعم)
-For support, please email support@example.com or open an issue in the GitHub repository.
+For support, please email info@nuqtai.com or open an issue in the GitHub repository.
