@@ -3,6 +3,54 @@
 ## Description (الوصف)
 A comprehensive medical system built with blockchain technology to manage patient records, appointments, and medical transactions securely on the Ethereum network.
 
+## Prerequisites (المتطلبات الأساسية)
+
+### Node.js Setup (إعداد Node.js)
+
+1. Install NVM (Node Version Manager):
+```bash
+# For macOS/Linux
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+# For Windows - using PowerShell (Run as Administrator)
+winget install CoreyButler.NVMforWindows
+```
+
+2. Install and use Node.js v18.17.1:
+```bash
+# Install specific version
+nvm install 18.17.1
+
+# Use the installed version
+nvm use 18.17.1
+```
+
+3. Verify installation:
+```bash
+node --version
+# Should output: v18.17.1
+```
+
+### Local Blockchain Setup (إعداد البلوكتشين المحلي)
+
+#### MetaMask Configuration (إعداد MetaMask)
+1. Network Name: localhost
+2. RPC URL: http://127.0.0.1:8545
+3. Chain ID: 1337
+4. Currency Symbol: ETH
+
+#### Hardhat Local Network (شبكة Hardhat المحلية)
+```bash
+# Start local blockchain
+npm run node
+```
+
+Default Admin Account:
+- Address: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+- Balance: 10000 ETH
+
+**Note**: When switching accounts in MetaMask, clear your transaction history to avoid conflicts.
+
 ## Features (المميزات)
 - Patient management (إدارة المرضى)
 - Appointment scheduling (جدولة المواعيد)
@@ -18,6 +66,7 @@ A comprehensive medical system built with blockchain technology to manage patien
 - IPFS/Pinata
 - Smart Contracts (Solidity)
 - OpenAI Integration
+- Hardhat (Development Environment)
 
 ## Installation (التثبيت)
 
@@ -89,7 +138,7 @@ npm run dev
 
 1. Connect Wallet (ربط المحفظة):
    - Install MetaMask or compatible Web3 wallet
-   - Connect to Holesky testnet
+   - Connect to Holesky testnet or local network
    - Ensure you have sufficient ETH for transactions
 
 2. Navigate the dashboard (استخدام لوحة التحكم):
